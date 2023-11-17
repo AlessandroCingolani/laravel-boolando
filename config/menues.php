@@ -4,17 +4,17 @@ return [
 
         "gender" => [
             [
-                "href" => '#',
+                "href" => 'uomo',
                 "text" => 'Uomo'
             ],
 
             [
-                "href" => '#',
+                "href" => 'donna',
                 "text" => 'Donna'
             ],
 
             [
-                "href" => '#',
+                "href" => 'bambino',
                 "text" => 'Bambino'
             ]
         ],
