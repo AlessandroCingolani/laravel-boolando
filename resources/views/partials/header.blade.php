@@ -8,7 +8,7 @@
 
             <div class="gender">
                 @foreach ($header_gender as $item)
-                    <a href="#">{{ $item['text'] }}</a>
+                    <a href="{{ route($item['href']) }}">{{ $item['text'] }}</a>
                 @endforeach
             </div>
 
