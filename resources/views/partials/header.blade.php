@@ -8,7 +8,8 @@
 
             <div class="gender">
                 @foreach ($header_gender as $item)
-                    <a href="{{ route($item['href']) }}">{{ $item['text'] }}</a>
+                    <a href="{{ route($item['href']) }}"
+                        class="{{ Route::currentRouteName() === $item['href'] ? 'active' : '' }}">{{ $item['text'] }}</a>
                 @endforeach
             </div>
 
