@@ -10,7 +10,35 @@
     max-width: $container-width;
     width: 80%;
     margin: 0 auto;
+    .page-detail-product {
+        h2 {
+            margin-bottom: 10px;
+            color: $header-background;
+        }
+        h4 {
+            margin-bottom: 15px;
+        }
+        text-align: center;
+        width: 100%;
+        img {
+            width: 300px;
 
+        }
+        .btn {
+            border: none;
+            background-color: $header-background;
+            padding: 10px 20px;
+            margin: 20px;
+            a {
+                padding: 10px;
+            }
+            &:hover{
+                transition: .5s all;
+                scale: 1.1;
+                background-color: lighten($header-background, 10%);
+            }
+        }
+    }
     .col-product {
         width: calc(100% / 3);
         padding: 10px;
