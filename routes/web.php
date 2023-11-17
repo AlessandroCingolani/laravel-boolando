@@ -19,30 +19,30 @@ Route::get('/', function () {
 
 Route::get('/donna', function () {
     $products = config('products');
-    $product_donna = array_filter($products, fn ($product) => $product['gender'] === 'donna');
-    if (empty($product_donna)) {
+    $product = array_filter($products, fn ($product) => $product['gender'] === 'donna');
+    if (empty($product)) {
         abort(404);
     }
-    return view('donna', compact('product_donna'));
+    return view('donna', compact('product'));
 })->name('donna');
 
 Route::get('/uomo', function () {
     $products = config('products');
-    $product_uomo = array_filter($products, fn ($product) => $product['gender'] === 'uomo');
-    if (empty($product_uomo)) {
+    $product = array_filter($products, fn ($product) => $product['gender'] === 'uomo');
+    if (empty($product)) {
         abort(404);
     }
-    return view('uomo', compact('product_uomo'));
+    return view('uomo', compact('product'));
 })->name('uomo');
 
 Route::get('/bambino', function () {
     $products = config('products');
-    $product_bambino = array_filter($products, fn ($product) => $product['gender'] === 'bambino');
-    if (empty($product_bambino)) {
+    $product = array_filter($products, fn ($product) => $product['gender'] === 'bambino');
+    if (empty($product)) {
         abort(404);
     }
 
-    return view('bambino', compact('product_bambino'));
+    return view('bambino', compact('product'));
 })->name('bambino');
 
 Route::get('/dettagli-prodotto/{slug}', function ($slug) {
