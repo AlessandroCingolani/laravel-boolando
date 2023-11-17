@@ -11,7 +11,7 @@
         <div class="product-card d-flex">
             @foreach ($products as $item)
                 <div class="col-product">
-                    <a class="link-details" href="{{ route('productDetail') }}">
+                    <a class="link-details" href="{{ route('productDetail', ['slug' => $item['slug']]) }}">
                         <div class="box-img">
                             <img src="/img/{{ $item['primaryImage'] }}" alt="img1">
                             <img class="hidden" src="/img/{{ $item['secondaryImage'] }}" alt="">
@@ -33,7 +33,7 @@
                         <h4>{{ $item['modello'] }}</h4>
                         <span class="product-actual-price">{{ $item['lastPrice'] }}&euro;</span>
                         @if ($item['fullPrice'] != null)
-                            <span class="product-old-price">{{ $item['fullPrice'] }}</span>
+                            <span class="product-old-price">{{ $item['fullPrice'] }}&euro;</span>
                         @endif
                     </div>
                 </div>
