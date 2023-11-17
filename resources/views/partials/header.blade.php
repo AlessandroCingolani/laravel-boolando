@@ -1,10 +1,15 @@
+@php
+    $header_gender = config('menues.header_menu.gender');
+    $header_icons = config('menues.header_menu.icons');
+@endphp
 <header>
     <div class="top-fixed">
         <div class="container header-bar d-flex">
 
             <div class="gender">
-                <p>gender</p>
-                {{-- <a v-for="(type,index) in gender" :key="index" :href="type.href">{{ type . text }}</a> --}}
+                @foreach ($header_gender as $item)
+                    <a href="#">{{ $item['text'] }}</a>
+                @endforeach
             </div>
 
             <div class="logo">
@@ -13,10 +18,11 @@
 
             <nav class="top-icons">
                 <ul>
-                    <p>icon</p>
-                    {{-- <li v-for="(icon,index) in icons" :key="index">
-                        <a :href="icon.href"><i :class="icon.icon"></i></a>
-                    </li> --}}
+                    @foreach ($header_icons as $icon)
+                        <li>
+                            <a href="#"><i class="{{ $icon['icon'] }}"></i></a>
+                        </li>
+                    @endforeach
                 </ul>
             </nav>
 
