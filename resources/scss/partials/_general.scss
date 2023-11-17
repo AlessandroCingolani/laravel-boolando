@@ -7,71 +7,81 @@
 }
 
 .container {
-  max-width: $container-width;
-  width: 80%;
-  margin: 0 auto;
-  .col-product {
-    width: calc(100% / 3);
-    padding: 10px;
-    position: relative;
-    img {
-      width: 100%;
-    }
-    .box-img {
-      position: relative;
+    max-width: $container-width;
+    width: 80%;
+    margin: 0 auto;
 
-      &:hover .hidden {
-        display: block;
-      }
+    .col-product {
+        width: calc(100% / 3);
+        padding: 10px;
 
-      .heart {
-        font-size: 1.5rem;
-        background-color: white;
-        padding: 5px 10px;
-        position: absolute;
-        top: 10px;
-        right: 0;
 
-        &:hover {
-          color: $discount-color;
-          cursor: pointer;
+        img {
+            width: 100%;
         }
-      }
-      .labels {
-        color: white;
-        position: absolute;
-        bottom: 40px;
-        .green-piece {
-          padding: 2px 5px;
-          background-color: $green-piece;
-        }
-        .discount {
-          background-color: $discount-color;
-          padding: 2px 5px;
-          margin-right: 3px;
-        }
-      }
-    }
-    .details-product {
-      h6 {
-        color: $brand-color;
-        padding-bottom: 1px;
-      }
+        .link-details {
+            position: relative;
+            color: black;
+            .box-img {
+                position: relative;
 
-      h4 {
-        text-transform: uppercase;
-      }
-      .product-actual-price {
-        color: $discount-color;
-        font-weight: 800;
-        margin-right: 3px;
-      }
+                &:hover .hidden {
+                    display: block;
+                }
 
-      .product-old-price {
-        text-decoration: line-through;
-      }
+                .heart {
+                    font-size: 1.5rem;
+                    background-color: white;
+                    padding: 5px 10px;
+                    position: absolute;
+                    top: 10px;
+                    right: 0;
+                    &:hover {
+                        color: $discount-color;
+                        cursor: pointer;
+                    }
+                }
+
+                .labels {
+                    color: white;
+                    position: absolute;
+                    bottom: 40px;
+
+                    .green-piece {
+                        padding: 2px 5px;
+                        background-color: $green-piece;
+                    }
+
+                    .discount {
+                        background-color: $discount-color;
+                        padding: 2px 5px;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+
+        .details-product {
+            h6 {
+                color: $brand-color;
+                padding-bottom: 1px;
+            }
+
+            h4 {
+                text-transform: uppercase;
+            }
+
+            .product-actual-price {
+                color: $discount-color;
+                font-weight: 800;
+                margin-right: 3px;
+            }
+
+            .product-old-price {
+                text-decoration: line-through;
+            }
+        }
     }
-  }
 }
 
 .d-flex {
