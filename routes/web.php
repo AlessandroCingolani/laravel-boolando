@@ -28,3 +28,7 @@ Route::get('/uomo', function () {
 Route::get('/bambino', function () {
     return view('bambino');
 })->name('bambino');
+
+Route::get('/dettagli-prodotto', function () {
+    return view('productDetail');
+})->name('productDetail');
